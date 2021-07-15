@@ -1,4 +1,6 @@
 # todo
+this is just simple vue3 todo
+i want add styling and routing 
 
 ## Project setup
 ```
