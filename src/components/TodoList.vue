@@ -1,11 +1,13 @@
 <template>
-<div fluid  class="todo__wrapper">
-  <todo-item  v-for="item in messages" 
-    :text="item.text" 
-    :key="item.key"
-    @deleteListItem="$emit('deleteAppItem', item.key)"
+<div class="row">
+  <div class="flex md12 offset--3" >
+    <TodoItem  v-for="item in messages" 
+      :text="item.text" 
+      :key="item.key"
+      @deleteListItem="$emit('deleteAppItem', item.key)"
     />
-</div>
+  </div>
+    </div>
 </template>
 
 <script>
