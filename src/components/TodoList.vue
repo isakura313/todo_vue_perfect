@@ -1,6 +1,6 @@
 <template>
 <div class="row">
-  <div class="flex md12 offset--3" >
+  <div class="flex md12" style="width: 50%;" >
     <TodoItem  v-for="item in messages" 
       :text="item.text" 
       :key="item.key"

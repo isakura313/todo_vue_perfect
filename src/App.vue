@@ -33,6 +33,9 @@ export default {
   }),
   methods: {
     addDeal() {
+      if(this.newTodo == ''){
+        return
+      }
       this.todos.push({ key: +new Date(), text: this.newTodo });
       this.newTodo = '';
     },

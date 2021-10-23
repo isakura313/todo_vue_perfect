@@ -1,7 +1,7 @@
 <template>
   <div class="row"> 
     <span> {{text}} </span>
-    <va-button icon-right="create" class="mr-4" @click="$emit('deleteListItem')">Edit</va-button>
+    <va-button icon-right="delete" class="mr-4" @click="$emit('deleteListItem')">delete</va-button>
   </div>
 </template>
 
