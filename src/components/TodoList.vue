@@ -1,11 +1,11 @@
 <template>
-<v-container fluid  class="todo__wrapper">
+<div fluid  class="todo__wrapper">
   <todo-item  v-for="item in messages" 
     :text="item.text" 
     :key="item.key"
     @deleteListItem="$emit('deleteAppItem', item.key)"
     />
-</v-container>
+</div>
 </template>
 
 <script>

@@ -1,10 +1,11 @@
 <template>
- <v-row justify="center" align="center">
-  <v-col cols="3"> 
-    <div class="todo__text">{{text}}  </div> </v-col>
-  <v-col cols="4">   
-    <v-icon class="delete_icon" @click="$emit('deleteListItem')"> mdi-delete </v-icon> </v-col>
- </v-row>
+ <div justify="center" align="center">
+  <div cols="3"> 
+    <div class="todo__text">{{text}}  </div> </div>
+  <div cols="4">   
+  <va-button icon-right="create" class="mr-4" @click="$emit('deleteListItem')">Edit</va-button>
+  </div>
+ </div>
 </template>
 
 <script>

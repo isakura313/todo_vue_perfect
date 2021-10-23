@@ -1,28 +1,35 @@
 <template>
-  <v-app>
-    <v-main>
-      <v-container fluid  class="todo__wrapper">
-        <v-row justify="center" align="center">
-          <v-col cols="4">
-           <input v-model="newTodo" class="todo__input"  @keypress.enter="addDeal" placeholder="Создайте дело"/>
-          </v-col>
-          <v-col cols="2">
-        <v-btn @click="addDeal"> Add </v-btn></v-col>
-          </v-row>
-          </v-container>
-              <todo-list :messages="todos"  @deleteAppItem = "deleteItem"/>
-    </v-main>
-  </v-app>
+  <div>
+    <div>
+      <div fluid  class="todo__wrapper">
+        <div justify="center" align="center">
+          <div cols="4">
+           <va-input 
+           v-model="newTodo"  
+           class="mb-4" 
+           @keypress.enter="addDeal" 
+           placeholder="Создайте дело"/>
+          </div>
+          <div cols="2">
+          <va-button @click="addDeal"> Add </va-button></div>
+          </div>
+          </div>
+        <todo-list :messages="todos"  @deleteAppItem = "deleteItem"/>
+    </div>
+  </div>
 </template>
 
 <script>
+import { VaInput, VaButton } from 'vuestic-ui'
+
 import TodoList from "./components/TodoList.vue";
 
 export default {
   name: "App",
-
   components: {
     TodoList,
+    VaInput,
+    VaButton
   },
 
   data: () => ({
@@ -37,10 +44,8 @@ export default {
   methods: {
     addDeal() {
       this.todos.push({ key: +new Date(), text: this.newTodo });
-      console.log(+new Date());
     },
     deleteItem(key){
-      console.log(key)
       this.todos = this.todos.filter(item => item.key != key)
     }
   },
@@ -48,6 +53,8 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 .todo__wrapper {
   width: 800px;
   border-right: 2px solid black;
