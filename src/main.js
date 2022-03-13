@@ -1,8 +1,9 @@
 import { createApp } from 'vue'
-import vuetify from './plugins/vuetify'
 import App from './App.vue'
-
+import { VuesticPlugin } from 'vuestic-ui' 
 const app = createApp(App)
-app.use(vuetify)
+app.use(VuesticPlugin) 
 
-app.mount('#app')
+
+// app.mount('#app')
+createApp(App).mount('#app')
