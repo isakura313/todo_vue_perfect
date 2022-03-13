@@ -3,9 +3,9 @@
     <v-main>
       <v-container fluid  class="todo__wrapper">
         <v-row justify="center" align="center">
-          <v-col cols="4">
-           <input v-model="newTodo" class="todo__input"  @keypress.enter="addDeal" placeholder="Создайте дело"/>
-          </v-col>
+          <!-- <v-col cols="4"> -->
+           <input v-model="newTodo"  @keypress.enter="addDeal" placeholder="Создайте дело"/>
+          <!-- </v-col> -->
           <v-col cols="2">
         <v-btn @click="addDeal"> Add </v-btn></v-col>
           </v-row>
@@ -50,7 +50,6 @@ export default {
 <style>
 .todo__wrapper {
   width: 800px;
-  border-right: 2px solid black;
 }
 .todo__input{
   padding: 5px;
